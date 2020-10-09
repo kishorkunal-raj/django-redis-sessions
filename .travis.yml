@@ -13,6 +13,19 @@ matrix:
       env: DJANGO="django>=1.4,<2.0"
     - python: "pypy"
       env: DJANGO="django>=1.4,<2.0"
+    # Adding jobs for ppc64le architecture
+    - python: "3.6"
+      arch: ppc64le
+      env: DJANGO="django>1.5"
+    - python: "3.5"
+      arch: ppc64le
+      env: DJANGO="django>1.5"
+    - python: "3.4"
+      arch: ppc64le
+      env: DJANGO="django>1.5"
+    - python: "2.7"
+      arch: ppc64le
+      env: DJANGO="django>=1.4,<2.0"
 install:
   - pip install $DJANGO
   - pip install -q redis
